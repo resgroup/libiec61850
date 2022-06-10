@@ -437,6 +437,10 @@ namespace IEC61850
 
                 private struct PTimestamp
                 {
+                    public PTimestamp()
+                    {
+                    }
+
                     [MarshalAs(UnmanagedType.ByValArray, ArraySubType = UnmanagedType.I1, SizeConst = 8)]
                     public byte[] val = new byte[8];
 				}

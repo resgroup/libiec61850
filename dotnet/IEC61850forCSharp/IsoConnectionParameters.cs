@@ -45,26 +45,38 @@ namespace IEC61850
             [StructLayout(LayoutKind.Sequential)]
             private struct NativeTSelector
             {
-                public byte size;
+                public NativeTSelector()
+                {
+                }
 
-                [MarshalAs(UnmanagedType.ByValArray, SizeConst=4)] public byte[] value;
+                public byte size = 0;
+
+                [MarshalAs(UnmanagedType.ByValArray, SizeConst=4)] public byte[] value = new byte[4];
             }
 
 
 			[StructLayout(LayoutKind.Sequential)]
 			private struct NativeSSelector
 			{
-				public byte size;
+                public NativeSSelector()
+                {
+                }
 
-				[MarshalAs(UnmanagedType.ByValArray, SizeConst=16)] public byte[] value;
+				public byte size = 0;
+
+				[MarshalAs(UnmanagedType.ByValArray, SizeConst=16)] public byte[] value = new byte[16];
 			}
 
             [StructLayout(LayoutKind.Sequential)]
             private struct NativePSelector
             {
-                public byte size;
+                public NativePSelector()
+                {
+                }
 
-                [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)] public byte[] value;
+                public byte size = 0;
+
+                [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)] public byte[] value = new byte[16];
             }
 
             [DllImport("iec61850", CallingConvention = CallingConvention.Cdecl)]
