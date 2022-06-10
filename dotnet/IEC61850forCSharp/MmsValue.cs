@@ -1042,8 +1042,10 @@ namespace IEC61850
                 return MmsValue_equals(this.valueReference, otherValue.valueReference);
             }
 
-			// override standard ToString() method
-			public override string ToString ()
+            public override int GetHashCode() => this.ToString().GetHashCode();
+
+            // override standard ToString() method
+            public override string ToString ()
 			{
 				switch (GetType ()) {
 				case MmsType.MMS_VISIBLE_STRING:

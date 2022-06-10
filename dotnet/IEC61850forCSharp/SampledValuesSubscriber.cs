@@ -435,10 +435,10 @@ namespace IEC61850
 					return SVSubscriber_ASDU_getFLOAT64 (self, index);
 				}
 
-				private struct PTimestamp
-				{
-					[MarshalAs(UnmanagedType.ByValArray, ArraySubType = UnmanagedType.I1, SizeConst = 8)]
-					public byte[] val;
+                private struct PTimestamp
+                {
+                    [MarshalAs(UnmanagedType.ByValArray, ArraySubType = UnmanagedType.I1, SizeConst = 8)]
+                    public byte[] val = new byte[8];
 				}
 
 				[DllImport("iec61850", CallingConvention = CallingConvention.Cdecl)]
