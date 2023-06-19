@@ -10,5 +10,11 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>2.0.0</Version>
   </PropertyGroup>
+	
+	<PropertyGroup>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<NoWarn>1701;1702;SA0001;SA1200;SA1208;SA1600;SA1602;SA1611;SA1615;SA1618;SA1633;
+		S101;S107;S1104;S1066;S1117;S1118;S1125;S1133;S1168;S1450;S1643;S1854;S1905;S2190;S2259;S2292;S2342;S2346;S2376;S2551;S2589;S2681;S2933;S2953;S3060;S3260;S3267;S3776;S3881;S3925;S3973;S4200;S4136;S4201;S4487</NoWarn> <!-- SonarCloud warnings -->
+	</PropertyGroup>
 
 </Project>
